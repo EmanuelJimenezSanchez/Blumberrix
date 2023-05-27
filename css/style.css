@@ -1,0 +1,134 @@
+:root {
+    --primario: #CF405D;
+    --primarioOscuro: #CE3F5C;
+    --secundario: #9268BB;
+    --secundarioOscuro: #9167BA;
+    --terciario: #A9B4EB;
+    --terciarioOscuro: #A8B3EA;
+    --cuaternario: #16406B;
+    --cuaternarioOscuro: #153F6A;
+
+    --blanco: #FFF;
+    --oscuro: #000;
+
+    --gris: #F1F6F9;
+    --grisOscuro: #9BA4B5;
+
+    --fuentePrincipal: 'Krub', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--oscuro);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--cuaternario);
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+/** Header **/
+.header {
+    background-color: var(--gris);
+    display: block;
+    text-align: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.header__logo {
+    margin-bottom: 1rem;
+    width: 20rem;
+}
+@media (min-width: 768px) {
+    .header__logo {
+        margin: 0;
+    }
+}
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .navegacion {
+        margin: 0;
+    }
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--cuaternario);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/** Footer **/
+.footer {
+    /* background-color: var(--grisOscuro); */
+    margin-top: 2rem;
+    padding: 2rem;
+    /* text-align: center; */
+    border-top: .5rem solid var(--grisOscuro);
+}
+.footer p {
+    font-size: 1.4rem;
+}
+.footer__informacion {
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .footer__informacion {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.footer_empresa {
+    text-align: left;
+}
+.footer__copyright {
+    text-align: center;
+}
+
+/** Main **/
+main {
+    height: 50rem;
+}
