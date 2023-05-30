@@ -63,8 +63,18 @@ h3 {
     max-width: 120rem;
     margin: 0 auto;
     margin-top: 4rem;
-    border: .5rem solid var(--primarioOscuro);
+    /* border: .5rem solid var(--primarioOscuro); */
     padding: 0 1rem;
+    text-align: center;
+}
+.nosotros__informacion {
+    text-align: justify;
+}
+.nosotros__imagenSecundaria {
+    width: 40rem;
+}
+.nosotros__autodescripcion {
+    text-align: center;
 }
 
 /** Header **/
@@ -106,14 +116,16 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
 }
+.navegacion__enlace--activo {
+    text-decoration: underline;
+}
 
 /** Footer **/
 .footer {
-    /* background-color: var(--grisOscuro); */
     margin-top: 2rem;
     padding: 2rem;
-    /* text-align: center; */
     border-top: .5rem solid var(--primarioOscuro);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../img/nosotros1.png");
 }
 .footer p {
     font-size: 1.4rem;
