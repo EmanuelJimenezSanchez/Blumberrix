@@ -1,18 +1,20 @@
 :root {
-    --primario: #CF405D;
+/*     --primario: #CF405D;
     --primarioOscuro: #CE3F5C;
     --secundario: #9268BB;
     --secundarioOscuro: #9167BA;
     --terciario: #A9B4EB;
     --terciarioOscuro: #A8B3EA;
     --cuaternario: #16406B;
-    --cuaternarioOscuro: #153F6A;
+    --cuaternarioOscuro: #153F6A; */
 
     --blanco: #FFF;
     --oscuro: #000;
 
-    --gris: #F1F6F9;
-    --grisOscuro: #9BA4B5;
+    --primario: #F1F6F9;
+    --primarioOscuro: #9BA4B5;
+    --secundario: #394867;
+    --secundarioOscuro: #212A3E;
 
     --fuentePrincipal: 'Krub', sans-serif;
 }
@@ -45,7 +47,7 @@ img {
 }
 h1, h2, h3 {
     text-align: center;
-    color: var(--cuaternario);
+    color: var(--secundario);
     font-family: var(--fuentePrincipal);
 }
 h1{
@@ -57,10 +59,17 @@ h2 {
 h3 {
     font-size: 1.8rem;
 }
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border: .5rem solid var(--primarioOscuro);
+    padding: 0 1rem;
+}
 
 /** Header **/
 .header {
-    background-color: var(--gris);
+    background-color: var(--primario);
     display: block;
     text-align: center;
     align-items: center;
@@ -93,7 +102,7 @@ h3 {
 }
 .navegacion__enlace {
     font-family: var(--fuentePrincipal);
-    color: var(--cuaternario);
+    color: var(--secundario);
     font-size: 2rem;
     font-weight: bold;
 }
@@ -104,7 +113,7 @@ h3 {
     margin-top: 2rem;
     padding: 2rem;
     /* text-align: center; */
-    border-top: .5rem solid var(--grisOscuro);
+    border-top: .5rem solid var(--primarioOscuro);
 }
 .footer p {
     font-size: 1.4rem;
@@ -128,7 +137,62 @@ h3 {
     text-align: center;
 }
 
-/** Main **/
-main {
-    height: 50rem;
+/** Productos **/
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.producto {
+    text-align: center;
+}
+.producto:hover {
+    cursor: pointer;
+}
+.producto:hover img {
+    opacity: 0.8;
+}
+.producto:hover h3 {
+    text-decoration: underline;
+}
+.producto__precio {
+    font-weight: bold;
+}
+
+/** Bienvenida **/
+.bienvenida__informacion {
+    text-align: center;
+}
+
+/** Categorias **/
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .categorias {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.categoria {
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.categoria__imagen:hover {
+    filter: brightness(75%);
+}
+.categoria__nombre {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--blanco);
 }
