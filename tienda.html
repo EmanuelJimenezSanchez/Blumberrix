@@ -16,13 +16,26 @@
         <a href="index.html">
             <img class="header__logo" src="img/Logo.png" alt="Logotipo blumberrix">
         </a>
-        <nav class="navegacion">
-            <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Inicio</a>
-            <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
-            <a class="navegacion__enlace" href="#">Joyeria</a>
-            <a class="navegacion__enlace" href="#">Bisuteria</a>
-            <a class="navegacion__enlace" href="contacto.html">Contacto</a>
-            <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+        <nav class="navegacion" id="navegacion">
+            <div class="control-menu">
+                <a href="#navegacion" class="abrir-menu"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                  </svg></a>
+                <a href="#" class="cerrar-menu"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                  </svg></a>
+            </div> <!-- .control-menu -->
+            <ul class="navegacion__menu">
+                <li><a class="navegacion__enlace" href="index.html">Inicio</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Nosotros</a></li>
+                <li><a class="navegacion__enlace navegacion__enlace--activo" href="tienda.html">Tienda</a></li>
+                <li><a class="navegacion__enlace" href="contacto.html">Contacto</a></li>
+            </ul> <!-- .navegacion__menu -->
         </nav>
     </header>
 
@@ -48,7 +61,11 @@
             </a>
             <div class="footer__contacto">
                 <h3>Encuéntranos en:</h3>
-                <p> 'poner el numero aqui' </p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                  </svg>+52 33 1115 2785</p>
                 <p>Horario de atención <strong>9:30-20:00</strong></p>
                 <div class="footer__redesSociales">
 
@@ -57,10 +74,10 @@
             <div class="footer__empresa">
                 <h3>Empresa</h3>
                 <nav class="footer__navegacion">
-                    <a href="#">
+                    <a href="nosotros.html">
                         <p>Quiénes somos</p>
                     </a>
-                    <a href="#">
+                    <a href="contacto.html">
                         <p>Contacto</p>
                     </a>
                     <a href="#">

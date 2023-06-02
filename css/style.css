@@ -10,6 +10,7 @@
 
     --blanco: #FFF;
     --oscuro: #000;
+    --gris: #4C4A48;
 
     --primario: #F1F6F9;
     --primarioOscuro: #9BA4B5;
@@ -30,7 +31,7 @@ html {
 
 /** Globales **/
 body {
-    background-color: var(--blanco);
+    background-color: var(--primario);
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -44,6 +45,11 @@ a {
 }
 img {
     width: 100%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 h1, h2, h3 {
     text-align: center;
@@ -63,8 +69,9 @@ h3 {
     max-width: 120rem;
     margin: 0 auto;
     margin-top: 4rem;
+    background-color: var(--blanco);
     /* border: .5rem solid var(--primarioOscuro); */
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     text-align: center;
 }
 .nosotros__informacion {
@@ -79,17 +86,10 @@ h3 {
 
 /** Header **/
 .header {
-    background-color: var(--primario);
-    display: block;
-    text-align: center;
+    background-color: var(--secundario);
+    display: flex;
     align-items: center;
-    padding: 2rem 0;
-}
-@media (min-width: 768px) {
-    .header {
-        display: flex;
-        justify-content: space-around;
-    }
+    justify-content: space-around;
 }
 .header__logo {
     margin-bottom: 1rem;
@@ -100,21 +100,79 @@ h3 {
         margin: 0;
     }
 }
+
+/** Navegacion **/
 .navegacion {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    align-items: center;
+    position: relative;
 }
 @media (min-width: 768px) {
     .navegacion {
-        margin: 0;
+        width: auto;
     }
+}
+
+.cerrar-menu {
+    display: none;
+}
+#navegacion:target .cerrar-menu {
+    display: block;
+}
+.abrir-menu {
+    display: block;
+}
+#navegacion:target .abrir-menu {
+    display: none;
+    justify-content: right;
+}
+.navegacion__menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 20rem; 
+    text-align: right;
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.8s;
+}
+#navegacion:target .navegacion__menu{
+    max-height: 30rem;
+    background: var(--gris) none repeat scroll 0 0;
+    transition: 0.8s;
 }
 .navegacion__enlace {
     font-family: var(--fuentePrincipal);
-    color: var(--secundario);
+    color: var(--blanco);
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bold;  
+    padding: 2rem;
+    display: block;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.navegacion__enlace:hover {
+    background-color: var(--primarioOscuro);
+}
+@media (min-width: 768px) {
+    .control-menu {
+        display: none;
+    }
+    .navegacion__menu {
+        display: flex;
+        background-color: var(--secundario);
+        position: initial;
+        width: auto;
+        max-height: 30rem;
+        transition: 2s;
+    }
+    .navegacion__icono {
+        display: none;
+    }
+    .navegacion__enlace {
+        display: flex;
+        color: var(--blanco);
+    }
 }
 .navegacion__enlace--activo {
     text-decoration: underline;
@@ -124,11 +182,14 @@ h3 {
 .footer {
     margin-top: 2rem;
     padding: 2rem;
-    border-top: .5rem solid var(--primarioOscuro);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../img/nosotros1.png");
+    background-color: var(--primarioOscuro);
+/*     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./../img/nosotros1.png");     */
 }
 .footer p {
     font-size: 1.4rem;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
 }
 .footer__informacion {
     display: block;
@@ -141,6 +202,9 @@ h3 {
         justify-content: space-evenly;
         align-items: center;
     }
+}
+.footer__contacto svg{
+    margin-right: 1rem;
 }
 .footer_empresa {
     text-align: left;
@@ -208,3 +272,5 @@ h3 {
     font-size: 3rem;
     color: var(--blanco);
 }
+
+
